@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programowanie_obiektowe_71449", "Programowanie_obiektowe_71449\Programowanie_obiektowe_71449.csproj", "{7A9FF41F-D439-4491-B834-54494ED7AC3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1", "Lab1\Lab1.csproj", "{10D9C7DF-6398-49D0-82B0-BD28D8128F32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7A9FF41F-D439-4491-B834-54494ED7AC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9FF41F-D439-4491-B834-54494ED7AC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A9FF41F-D439-4491-B834-54494ED7AC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D9C7DF-6398-49D0-82B0-BD28D8128F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D9C7DF-6398-49D0-82B0-BD28D8128F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D9C7DF-6398-49D0-82B0-BD28D8128F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D9C7DF-6398-49D0-82B0-BD28D8128F32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
