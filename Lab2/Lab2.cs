@@ -2,6 +2,7 @@ using System;
 
 namespace Lab2
 {
+    //zadanie 7/10/15
     class Program
     {
         public static void Main()
@@ -13,14 +14,21 @@ namespace Lab2
             Zwierze.powiedz_cos(kot1);
             Zwierze.powiedz_cos(waz1);
 
+            Piekarz piekarz1 = new Piekarz ();
+            piekarz1.Pracuj();
+
+            A a1 = new A ();
+            B b1 = new B ();
+            C c1 = new C ();
+           
         }
     }
 
-    //zadanie 1/6
+    //zadanie 1/6/7
     class Zwierze
     {
         protected string nazwa;
-        public Zwierze(string nazwa_zwierzat)
+        public Zwierze (string nazwa_zwierzat)
         {
             nazwa = nazwa_zwierzat;
         }
@@ -28,9 +36,10 @@ namespace Lab2
         {
             Console.WriteLine();
         }
-        public static void powiedz_cos(Zwierze z) //wywoływania metodę daj_glos()
+        public static void powiedz_cos(Zwierze z) 
         {
             z.daj_glos();
+            Console.WriteLine($"Typ obiektu: {z.GetType().Name}\n");    
         }
     }
 
@@ -64,5 +73,48 @@ namespace Lab2
             Console.WriteLine($"{nazwa} robi ssssssss!");
         }
     }
+
+    //zadanie 8
+    abstract class Pracownik
+    {
+        public abstract void Pracuj();
+    }
+
+    //zadanie 9
+    class Piekarz : Pracownik 
+    {
+        public override void Pracuj()
+        {
+            Console.WriteLine("Trwa pieczenie… \n");
+        }
+    }
+
+    //zadanie 12
+    class A
+    {
+        public A() 
+        {
+            Console.WriteLine("To jest konstruktor A ");
+        }
+    }
+
+    //zadanie 13
+    class B : A 
+    { 
+        public B()
+        {
+            Console.WriteLine("To jest konstuktor B ");
+        }
+    }
+
+    //zadnie 14
+    class C : B 
+    {
+        public C()
+        {
+            Console.WriteLine("To jest konstruktor C ");
+        }
+    }
+
     
 }
