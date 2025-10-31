@@ -1,58 +1,68 @@
-﻿using System;
+using System;
 
-namespace Lab1
+namespace Lab2
 {
     class Program
     {
         public static void Main()
         {
-            Zwierze Pies = new Pies("Burek");
-            Zwierze Kot = new Kot("Filemon");
-            Zwierze Waz = new Waz("Pioter");
-            Zwierze.powiedz_cos(Pies
-            Zwierze.powiedz_cos(Kot);
-            Zwierze.powiedz_cos(Waz);
+            Pies pies1= new Pies ("Cezar");
+            Kot kot1 = new Kot("Bonia");
+            Waz waz1 = new Waz("Kola");
+            Zwierze.powiedz_cos(pies1);
+            Zwierze.powiedz_cos(kot1);
+            Zwierze.powiedz_cos(waz1);
+
         }
     }
+
+    //zadanie 1/6
     class Zwierze
     {
         protected string nazwa;
-        public Zwierze(string nazwa)
+        public Zwierze(string nazwa_zwierzat)
         {
-            this.nazwa = nazwa;
+            nazwa = nazwa_zwierzat;
         }
         public virtual void daj_glos()
         {
             Console.WriteLine();
         }
-        public static void powiedz_cos(Zwierze z) //wywoływanie metody daj_glos
+        public static void powiedz_cos(Zwierze z) //wywoływania metodę daj_glos()
         {
             z.daj_glos();
         }
     }
+
+    //zadanie 2/5
     class Pies : Zwierze
     {
-        Pies(string nazwa) : base(nazwa) { }
+        public Pies(string nazwa) : base(nazwa) { } 
         public override void daj_glos()
         {
-            Console.WriteLine($"woof woof! {nazwa}");
+            Console.WriteLine($"{nazwa} robi woof woof!");
         }
+
     }
+
+    //zadanie 3/5
     class Kot : Zwierze
     {
-        Kot(string nazwa) : base(nazwa) { }
+        public Kot(string nazwa) : base(nazwa) { }
         public override void daj_glos()
         {
-            Console.WriteLine($"miau miau! {nazwa}");
+            Console.WriteLine($"{nazwa} robi miau miau! ");
         }
     }
+
+    //zadanie 4/5
     class Waz : Zwierze
     {
-        Waz(string nazwa) : base(nazwa) { }
+        public Waz(string nazwa) : base(nazwa) { }
         public override void daj_glos()
         {
-            Console.WriteLine($"ssssss! {nazwa}");
+            Console.WriteLine($"{nazwa} robi ssssssss!");
         }
     }
-}
+    
 }
