@@ -1,26 +1,26 @@
-using System;
+﻿using System;
 
 namespace Lab2
 {
     //zadanie 7/10/15
-    class Program
+    class Program_l2
     {
         public static void Main()
         {
-            Pies pies1= new Pies ("Cezar");
+            Pies pies1 = new Pies("Cezar");
             Kot kot1 = new Kot("Bonia");
             Waz waz1 = new Waz("Kola");
             Zwierze.powiedz_cos(pies1);
             Zwierze.powiedz_cos(kot1);
             Zwierze.powiedz_cos(waz1);
 
-            Piekarz piekarz1 = new Piekarz ();
+            Piekarz piekarz1 = new Piekarz();
             piekarz1.Pracuj();
 
-            A a1 = new A ();
-            B b1 = new B ();
-            C c1 = new C ();
-           
+            A a1 = new A();
+            B b1 = new B();
+            C c1 = new C();
+
         }
     }
 
@@ -28,7 +28,7 @@ namespace Lab2
     class Zwierze
     {
         protected string nazwa;
-        public Zwierze (string nazwa_zwierzat)
+        public Zwierze(string nazwa_zwierzat)
         {
             nazwa = nazwa_zwierzat;
         }
@@ -36,17 +36,17 @@ namespace Lab2
         {
             Console.WriteLine();
         }
-        public static void powiedz_cos(Zwierze z) 
+        public static void powiedz_cos(Zwierze z)
         {
             z.daj_glos();
-            Console.WriteLine($"Typ obiektu: {z.GetType().Name}\n");    
+            Console.WriteLine($"Typ obiektu: {z.GetType().Name}\n");
         }
     }
 
     //zadanie 2/5
     class Pies : Zwierze
     {
-        public Pies(string nazwa) : base(nazwa) { } 
+        public Pies(string nazwa) : base(nazwa) { }
         public override void daj_glos()
         {
             Console.WriteLine($"{nazwa} robi woof woof!");
@@ -81,7 +81,7 @@ namespace Lab2
     }
 
     //zadanie 9
-    class Piekarz : Pracownik 
+    class Piekarz : Pracownik
     {
         public override void Pracuj()
         {
@@ -92,15 +92,15 @@ namespace Lab2
     //zadanie 12
     class A
     {
-        public A() 
+        public A()
         {
             Console.WriteLine("To jest konstruktor A ");
         }
     }
 
     //zadanie 13
-    class B : A 
-    { 
+    class B : A
+    {
         public B()
         {
             Console.WriteLine("To jest konstuktor B ");
@@ -108,7 +108,7 @@ namespace Lab2
     }
 
     //zadnie 14
-    class C : B 
+    class C : B
     {
         public C()
         {
@@ -116,5 +116,5 @@ namespace Lab2
         }
     }
 
-    
+
 }
