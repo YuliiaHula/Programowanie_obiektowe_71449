@@ -91,9 +91,9 @@ namespace Lab3
             return new ComplexNumber(this.re, this.im);
         }
 
-        public bool Equals( ComplexNumber e) 
+        public bool Equals( ComplexNumber other) 
         {
-            if ( this.re == e.re && this.im == e. im)
+            if ( this.re == other.re && this.im == other.im)
             {
                 return true;
             }
@@ -103,9 +103,17 @@ namespace Lab3
             }
         }
 
-        public static bool operator == (ComplexNumber c1, ComplexNumber c2)
+        public static bool operator ==(ComplexNumber c1, ComplexNumber c2)
         {
-            if(c1.re != c2.re || c1.im != c2.im)
+            if (ReferenceEquals(c1, c2))
+            {
+                return true;
+            }
+            else if (c1 is null || c2 is null)
+            {
+                return false;
+            }
+            if (c1.re != c2.re || c1.im != c2.im)
             {
                 return false;
             }
